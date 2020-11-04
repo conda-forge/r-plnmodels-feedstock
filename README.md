@@ -172,6 +172,3 @@ Feedstock Maintainers
 * [@cpauvert](https://github.com/cpauvert/)
 * [@jchiquet](https://github.com/jchiquet/)
 
-
-<!-- dummy commit to enable rerendering -->
-
