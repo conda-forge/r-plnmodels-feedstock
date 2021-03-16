@@ -3,7 +3,7 @@ About r-plnmodels
 
 Home: https://jchiquet.github.io/PLNmodels/
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-plnmodels-feedstock/blob/master/LICENSE.txt)
 
