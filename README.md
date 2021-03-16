@@ -1,7 +1,7 @@
 About r-plnmodels
 =================
 
-Home: https://jchiquet.github.io/PLNmodels/
+Home: https://pln-team.github.io/PLNmodels/
 
 Package license: GPL-3.0-or-later
 
