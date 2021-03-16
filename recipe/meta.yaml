@@ -39,16 +39,17 @@ requirements:
     - r-rcpparmadillo
     - r-corrplot
     - r-dplyr
+    - r-future
+    - r-future.apply
     - r-ggplot2
     - r-glassofast
     - r-gridextra
     - r-igraph
     - r-magrittr
     - r-nloptr >=1.2.0
+    - r-purrr
+    - r-rlang
     - r-tidyr
-    - libblas
-    - liblapack
-
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -59,12 +60,16 @@ requirements:
     - r-rcpparmadillo
     - r-corrplot
     - r-dplyr
+    - r-future
+    - r-future.apply
     - r-ggplot2
     - r-glassofast
     - r-gridextra
     - r-igraph
     - r-magrittr
     - r-nloptr >=1.2.0
+    - r-purrr
+    - r-rlang
     - r-tidyr
 
 test:
@@ -74,7 +79,7 @@ test:
 
 about:
   home: https://jchiquet.github.io/PLNmodels/
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   summary: The Poisson-lognormal model and variants can be used for a variety of multivariate problems when count data are at play, including principal component analysis for count data (Chiquet, Mariadassou and Robin, 2018 <doi:10.1214/18-AOAS1177>), discriminant analysis and network inference (Chiquet, Mariadassou and
     Robin, 2018 <http://proceedings.mlr.press/v97/chiquet19a.html>). Implements variational algorithms to fit such models accompanied with a set of functions for visualization and diagnostic.
   license_family: GPL3
