@@ -1,4 +1,4 @@
-{% set version = '0.10.6' %}
+{% set version = "0.11.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PLNmodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PLNmodels/PLNmodels_{{ version }}.tar.gz
-  sha256: 99db39b816c7949a6497a2d860953a7479f94047bb8b3395c2acf99fb8f759e6
+  sha256: 2b827c3b1dbec0467c0be775c7b754cb5b51203cb6454a79342d51afb834db8f
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -39,16 +39,19 @@ requirements:
     - r-rcpparmadillo
     - r-corrplot
     - r-dplyr
+    - r-future
+    - r-future.apply
     - r-ggplot2
     - r-glassofast
     - r-gridextra
     - r-igraph
     - r-magrittr
     - r-nloptr >=1.2.0
+    - r-purrr
+    - r-rlang
     - r-tidyr
     - libblas
     - liblapack
-
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -59,12 +62,16 @@ requirements:
     - r-rcpparmadillo
     - r-corrplot
     - r-dplyr
+    - r-future
+    - r-future.apply
     - r-ggplot2
     - r-glassofast
     - r-gridextra
     - r-igraph
     - r-magrittr
     - r-nloptr >=1.2.0
+    - r-purrr
+    - r-rlang
     - r-tidyr
 
 test:
@@ -74,16 +81,12 @@ test:
 
 about:
   home: https://jchiquet.github.io/PLNmodels/
-  license: GPL-3.0-only
-  summary: The Poisson-lognormal model and variants can be used for a variety of multivariate
-    problems when count data are at play, including principal component analysis for
-    count data (Chiquet, Mariadassou and Robin, 2018 <doi:10.1214/18-AOAS1177>), discriminant
-    analysis and network inference (Chiquet, Mariadassou and Robin, 2018 <http://proceedings.mlr.press/v97/chiquet19a.html>).
-    Implements variational algorithms to fit such models accompanied with a set of functions
-    for visualization and diagnostic.
+  license: GPL-3.0-or-later
+  summary: The Poisson-lognormal model and variants can be used for a variety of multivariate problems when count data are at play, including principal component analysis for count data (Chiquet, Mariadassou and Robin, 2018 <doi:10.1214/18-AOAS1177>), discriminant analysis and network inference (Chiquet, Mariadassou and
+    Robin, 2018 <http://proceedings.mlr.press/v97/chiquet19a.html>). Implements variational algorithms to fit such models accompanied with a set of functions for visualization and diagnostic.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
