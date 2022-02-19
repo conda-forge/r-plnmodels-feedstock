@@ -30,6 +30,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-mass
@@ -46,12 +47,10 @@ requirements:
     - r-gridextra
     - r-igraph
     - r-magrittr
-    - r-nloptr >=1.2.0
+    - r-nloptr
     - r-purrr
     - r-rlang
     - r-tidyr
-    - libblas
-    - liblapack
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -69,7 +68,7 @@ requirements:
     - r-gridextra
     - r-igraph
     - r-magrittr
-    - r-nloptr >=1.2.0
+    - r-nloptr
     - r-purrr
     - r-rlang
     - r-tidyr
