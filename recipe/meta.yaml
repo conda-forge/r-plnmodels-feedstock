@@ -1,4 +1,4 @@
-{% set version = "0.11.6" %}
+{% set version = "0.11.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PLNmodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PLNmodels/PLNmodels_{{ version }}.tar.gz
-  sha256: 4a79edfac3eaa57ed1219c194c460acf26db2fd25f4c9ce372713a1610e4acee
+  sha256: 3fbac90df558a624a172c02b7abd8b0f6bbe1bcbecb6f4cba18705f18bed6580
 
 build:
   merge_build_host: true  # [win]
