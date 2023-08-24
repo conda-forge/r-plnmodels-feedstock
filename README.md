@@ -3,6 +3,7 @@ About r-plnmodels-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-plnmodels-feedstock/blob/main/LICENSE.txt)
 
+
 About r-plnmodels
 -----------------
 
@@ -15,6 +16,7 @@ Summary: The Poisson-lognormal model and variants can be used for a variety of m
 Development: https://github.com/pln-team/PLNmodels/
 
 Documentation: https://pln-team.github.io/PLNmodels/reference/index.html
+
 About r-plnmodels
 -----------------
 
