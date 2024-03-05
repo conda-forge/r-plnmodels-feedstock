@@ -46,6 +46,7 @@ requirements:
     - r-matrix
     - r-nloptr
     - r-purrr
+    - r-pscl
     - r-r6
     - r-rcpp
     - r-rcpparmadillo
@@ -70,6 +71,7 @@ requirements:
     - r-matrix
     - r-nloptr
     - r-purrr
+    - r-pscl
     - r-r6
     - r-rcpp
     - r-rcpparmadillo
