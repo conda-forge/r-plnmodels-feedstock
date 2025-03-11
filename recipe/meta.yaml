@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PLNmodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PLNmodels/PLNmodels_{{ version }}.tar.gz
-  sha256: 2906588edf06688482aa974ef62d2455eddbef1d4331a46a1d1cc91beff00ebb
+  sha256: 5236be17a4144237f139c95f4198cad9e0357cb8774e5d4471a615a4a2e1d4f8
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
