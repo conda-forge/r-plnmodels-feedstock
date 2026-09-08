@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -33,23 +37,21 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-mass
+    - r-matrix
+    - r-r6
+    - r-rcpp
+    - r-rcpparmadillo
+    - r-cli
     - r-corrplot
     - r-dplyr
-    - r-future
-    - r-future.apply
     - r-ggplot2
     - r-glassofast
     - r-gridextra
     - r-igraph
     - r-magrittr
-    - r-mass
-    - r-matrix
     - r-nloptr
     - r-purrr
-    - r-pscl
-    - r-r6
-    - r-rcpp
-    - r-rcpparmadillo
     - r-rlang
     - r-tidyr
     - r-torch
@@ -57,23 +59,21 @@ requirements:
     - liblapack
   run:
     - r-base
+    - r-mass
+    - r-matrix
+    - r-r6
+    - r-rcpp
+    - r-rcpparmadillo
+    - r-cli
     - r-corrplot
     - r-dplyr
-    - r-future
-    - r-future.apply
     - r-ggplot2
     - r-glassofast
     - r-gridextra
     - r-igraph
     - r-magrittr
-    - r-mass
-    - r-matrix
     - r-nloptr
     - r-purrr
-    - r-pscl
-    - r-r6
-    - r-rcpp
-    - r-rcpparmadillo
     - r-rlang
     - r-tidyr
     - r-torch
